@@ -10,7 +10,7 @@ class Fraction{
         this.n=n;
         this.d=d;
         if(this.d==0){
-            System.out.println("AAAAAHHHHHHHHHHHHHHH");
+            System.out.println("AAAAAHHHHHHHHHHHHHHH YOU APE!!!! YOU DIVIDED BY 0!");
             this.d=1;
         }
         this.reduce();
@@ -21,7 +21,7 @@ class Fraction{
         this.n=Integer.parseInt(num.substring(0,index));
         this.d=Integer.parseInt(num.substring(index+1,num.length()));
         if(d==0){
-            System.out.println("AAAAAHHHHHHHHHHHHHHH");
+            System.out.println("AAAAAHHHHHHHHHHHHHHH YOU APE!!!! YOU DIVIDED BY 0!");
             d=1;
         }
 
@@ -37,7 +37,7 @@ class Fraction{
     public void reduce(){
         int denom=1;
         int i=1;
-        while(i<=this.n&&i<=this.d){
+        while(i<=Math.abs(this.n)&&i<=Math.abs(this.d)){
             if(this.n%i==0&&this.d%i==0){
                 denom=i;
             }
